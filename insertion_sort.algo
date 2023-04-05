@@ -1,0 +1,26 @@
+# Checkpoint-Sorting-and-searching-algorithms
+ALGORITHM insertion_sort
+VAR
+    arr : ARRAY_OF INTEGER [10];
+    i,j,n,current:INTEGER;
+BEGIN
+  write("give the size of table")
+    read(n)
+    FOR i FROM 0 TO n STEP step  DO
+        read(arr[i])
+    END_FOR
+
+    FOR i FROM 1 TO arr.length STEP step  DO
+        current:=arr[i];
+        j:=j-1;
+        WHILE (j>=0 and arr[j]>current) DO
+            arr[j+1]:=arr[j];
+            j:=j-1;
+        END_WHILE
+        arr[j+1]:=current;
+    END_FOR
+END
+
+    FOR i FROM 0 TO n STEP step  DO
+        write(arr[i])
+    END_FOR
